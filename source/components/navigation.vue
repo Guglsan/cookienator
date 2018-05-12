@@ -8,9 +8,22 @@
 export default {
   props: [],
   data() {
-    return {};
+    return {
+      // Переменные
+    };
   },
-  methods: {}
+  methods: {
+    setPage(page) {
+      window.setPage(page);
+    },
+    getPage() {
+      return window.getPage();
+    }
+    // Функции
+  },
+  mounted() {
+    // Как только создался делать что-то
+  }
 };
 </script>
 

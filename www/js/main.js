@@ -449,7 +449,17 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   methods: {
     go: function go(page) {
       this.page = page;
+    },
+    getPage: function getPage() {
+      return this.page;
+    },
+    setPage: function setPage(page) {
+      this.page = page;
     }
+  },
+  created: function created() {
+    window.getPage = this.getPage;
+    window.setPage = this.setPage;
   }
 });
 
@@ -469,10 +479,24 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
   data: function data() {
-    return {};
+    return {
+      // Переменные
+    };
   },
 
-  methods: {}
+  methods: {
+    setPage: function setPage(page) {
+      window.setPage(page);
+    },
+    getPage: function getPage() {
+      return window.getPage();
+    }
+    // Функции
+
+  },
+  mounted: function mounted() {
+    // Как только создался делать что-то
+  }
 });
 
 /***/ }),

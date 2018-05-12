@@ -12,6 +12,16 @@ new Vue({
   methods: {
     go(page) {
       this.page = page;
+    },
+    getPage() {
+      return this.page;
+    },
+    setPage(page) {
+      this.page = page;
     }
+  },
+  created() {
+    window.getPage = this.getPage;
+    window.setPage = this.setPage;
   }
 });
