@@ -9,7 +9,9 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+    auth() {}
+  }
 };
 </script>
 
