@@ -63,4 +63,23 @@ export default {
 .error {
   background-color: crimson;
 }
+
+// Обычные экраны
+input {
+  width: 25%;
+}
+
+// Планшеты (Если под планшеты и мобильные одинаково, то в мобильные дублировать не нужно)
+@media screen and (max-width: 1024px) {
+  input {
+    width: 50%;
+  }
+}
+
+// Мобильные
+@media screen and (max-width: 600px) {
+  input {
+    width: 100%;
+  }
+}
 </style>
