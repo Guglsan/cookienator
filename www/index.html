@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cokienator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pe-icon-7-stroke.min.css">
 </head>
 
 <body>
     <div id="cookienator">
-        <auth v-if="page === 'auth'"></auth>
-        <main v-if="page === 'main'"></main>
+        <auth v-if="page === 'auth'" @authed="page='statistics'"></auth>
+        <navigation></navigation>
+        <statistics v-if="page === 'statistics'"></statistics>
     </div>
     <script src="js/main.js"></script>
 </body>
