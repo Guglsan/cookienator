@@ -545,6 +545,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: [],
@@ -564,7 +567,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         console.log("АВТОРИЗИРУЕМ");
         this.$emit("authed");
       } else {
-        this.error = "Не введен логн или пароль";
+        this.error = "Не введен логин или пароль";
         console.log("Ошибка ввода");
       }
     }
@@ -608,8 +611,20 @@ exports = module.exports = __webpack_require__(0)();
 exports.push([module.i, "", ""]);
 
 /***/ }),
-/* 11 */,
-/* 12 */,
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+exports.push([module.i, "", ""]);
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)();
+exports.push([module.i, "\n.auth-window[data-v-78d19357] {\n  background-color: #333;\n  min-width: 270px;\n  max-width: 500px;\n  height: 70vh;\n}\n.error[data-v-78d19357] {\n  background-color: crimson;\n}\n", ""]);
+
+/***/ }),
 /* 13 */
 /***/ (function(module, exports) {
 
@@ -1057,7 +1072,7 @@ exports.clearImmediate = clearImmediate;
 
 
 /* styles */
-__webpack_require__(32)
+__webpack_require__(26)
 
 var Component = __webpack_require__(1)(
   /* script */
@@ -1133,7 +1148,7 @@ module.exports = Component.exports
 
 
 /* styles */
-__webpack_require__(34)
+__webpack_require__(27)
 
 var Component = __webpack_require__(1)(
   /* script */
@@ -1255,9 +1270,11 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('p', {
+  return _c('div', [_c('div', {
+    staticClass: "auth-window fcenter flex"
+  }), _vm._v(" "), _c('p', {
     ref: "page"
-  }, [_vm._v("Автоизация")]), _vm._v(" "), _c('i', {
+  }, [_vm._v("Авторизация")]), _vm._v(" "), _c('i', {
     staticClass: "pe-7s-menu"
   }), _vm._v(" "), _c('input', {
     directives: [{
@@ -1355,8 +1372,58 @@ if(false) {
 }
 
 /***/ }),
-/* 26 */,
-/* 27 */,
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(11);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("db08dee2", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-781083d4\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/less-loader/index.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./navigation.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-781083d4\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/less-loader/index.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./navigation.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(12);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("8a1c734c", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-78d19357\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/less-loader/index.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./auth.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-78d19357\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/less-loader/index.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./auth.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
 /* 28 */
 /***/ (function(module, exports) {
 
@@ -12212,72 +12279,6 @@ module.exports = Vue$3;
 
 module.exports = __webpack_require__(4);
 
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)();
-exports.push([module.i, "", ""]);
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(31);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(2)("db08dee2", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-781083d4\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/less-loader/index.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./navigation.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-781083d4\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/less-loader/index.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./navigation.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)();
-exports.push([module.i, "\n.error[data-v-78d19357] {\n  background-color: crimson;\n}\n", ""]);
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(33);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(2)("8a1c734c", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-78d19357\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/less-loader/index.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./auth.vue", function() {
-     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-78d19357\",\"scoped\":true,\"hasInlineConfig\":true}!../../node_modules/less-loader/index.js!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./auth.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
 
 /***/ })
 /******/ ]);

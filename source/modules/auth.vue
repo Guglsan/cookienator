@@ -1,7 +1,10 @@
 <template>
     <div>
-      <p ref="page">Автоизация</p>
 
+      <div class="auth-window fcenter flex">
+
+      </div>
+      <p ref="page">Авторизация</p>
       <i class="pe-7s-menu"></i>
       <!-- ПРИВЯЗКА ЗНАЧЕНИЯ -->
       <input 
@@ -34,7 +37,7 @@ export default {
         console.log("АВТОРИЗИРУЕМ");
         this.$emit("authed");
       } else {
-        this.error = "Не введен логн или пароль";
+        this.error = "Не введен логин или пароль";
         console.log("Ошибка ввода");
       }
     }
@@ -43,13 +46,19 @@ export default {
 </script>
 
 <style lang="less" scoped>
-input {
-  &:focus {
-  }
-
-  &:blur {
-  }
+.auth-window {
+  background-color: #333;
+  min-width: 270px;
+  max-width: 500px;
+  height: 70vh;
 }
+// input {
+//   &:focus {
+//   }
+
+//   &:blur {
+//   }
+// }
 
 .error {
   background-color: crimson;
