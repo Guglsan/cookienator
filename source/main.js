@@ -4,6 +4,7 @@ Vue.component("auth", require("./modules/auth.vue"));
 Vue.component("navigation", require("./components/navigation.vue"));
 Vue.component("products", require("./components/products.vue"));
 Vue.component("statistics", require("./modules/statistics.vue"));
+Vue.component("btn", require("./components/btn.vue"));
 new Vue({
   el: "#cookienator",
   data: {

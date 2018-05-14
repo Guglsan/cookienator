@@ -1,21 +1,39 @@
 <template>
-    <div>
+    <div class="fcenter flex w100 h100 auth-window">
+      <div class="auth-border">
+        <div class="auth-form flex fcol">
 
-      <div class="auth-window fcenter flex">
+          <span>Авторизация</span>
 
+          <div class="flex">
+            <div class="input-field fcol flex fcenter">
+              <label for="auth-login">Логин</label>
+              <input 
+                :class="error ? 'error':''" 
+                type="text" 
+                id="auth-login"
+                v-model="login" 
+                @keyup.enter="auth()"
+                @focus="error=false"/>
+            </div>
+
+            <div class="input-field fcol flex fcenter">
+              <label for="auth-password">Пароль</label>
+              <input 
+                :class="error ? 'error':''" 
+                type="password" 
+                id="auth-password"
+                v-model="password" 
+                @keyup.enter="auth()"
+                @focus="error=false"/>
+            </div>
+          </div>
+
+          <btn @click="auth()">Вход</btn>
+
+        </div>
+     
       </div>
-      <p ref="page">Авторизация</p>
-      <i class="pe-7s-menu"></i>
-      <!-- ПРИВЯЗКА ЗНАЧЕНИЯ -->
-      <input 
-        :class="error ? 'error':''" 
-        type="text" 
-        v-model="login" 
-        @keyup.enter="auth()"
-        @focus="error=false"/>
-
-      <!-- ПРОВЕРИТЬ -->
-      <a @click="auth()">Вход</a>
     </div>
 </template>
 
@@ -24,7 +42,7 @@ export default {
   props: [],
   data() {
     return {
-      login: "test",
+      login: "",
       password: "",
       error: false
     };
@@ -47,39 +65,84 @@ export default {
 
 <style lang="less" scoped>
 .auth-window {
-  background-color: #333;
-  min-width: 270px;
-  max-width: 500px;
-  height: 70vh;
+  .auth-border {
+    background-color: #ffffff8a;
+    padding: 17px;
+    border-radius: 20px;
+  }
+  .auth-form {
+    background-color: #fff;
+    min-height: 300px;
+    width: 450px;
+    border-radius: 5px;
+    span {
+      text-align: center;
+      padding-top: 25px;
+      font-size: 30px;
+      border-bottom: 1px solid #dadada;
+      padding-bottom: 25px;
+      margin: 0 15px;
+    }
+    .flex {
+      max-height: 110px;
+      min-height: 110px;
+    }
+  }
 }
-// input {
-//   &:focus {
-//   }
+.input-field {
+  width: 50%;
+  label {
+    align-self: flex-start;
+    padding-left: 27px;
+    padding-bottom: 15px;
+  }
+  input {
+    height: 25px;
+    transition: border-color 0.4s;
+    border: 1px solid #bdb9b9;
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
 
-//   &:blur {
-//   }
-// }
+    &:focus {
+      border-color: #7c7982;
+    }
+  }
+}
 
 .error {
-  background-color: crimson;
-}
-
-// Обычные экраны
-input {
-  width: 25%;
+  border-color: crimson !important;
 }
 
 // Планшеты (Если под планшеты и мобильные одинаково, то в мобильные дублировать не нужно)
 @media screen and (max-width: 1024px) {
-  input {
-    width: 50%;
-  }
 }
 
 // Мобильные
 @media screen and (max-width: 600px) {
-  input {
+  .auth-window .auth-form {
     width: 100%;
+    .flex {
+      flex-direction: column;
+      max-height: initial;
+      min-height: 65px;
+      .input-field {
+        width: 100%;
+        label {
+          padding-bottom: 5px;
+        }
+        input {
+          width: 90%;
+        }
+      }
+    }
+  }
+  .auth-window .auth-border {
+    border-radius: 0;
+    width: 100%;
+  }
+  .experiment {
+    margin-bottom: 15px !important;
   }
 }
 </style>

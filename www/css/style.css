@@ -1,6 +1,12 @@
-body {
+body,
+html,
+#cookienator {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Segoe UI Light;
+    overflow: hidden;
 }
 
 .flex {
@@ -10,4 +16,22 @@ body {
 .fcenter {
     justify-content: center;
     align-items: center;
+}
+
+.fcol {
+    flex-direction: column;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.h100 {
+    height: 100%;
+}
+
+.auth-window {
+    background-image: url("../img/auth-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
