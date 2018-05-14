@@ -445,7 +445,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component("btn", __webpack_require__
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   el: "#cookienator",
   data: {
-    page: "auth"
+    page: "statistics"
   },
   methods: {
     go: function go(page) {
@@ -470,6 +470,17 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -634,7 +645,7 @@ exports.push([module.i, "", ""]);
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)();
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\n.nav[data-v-781083d4] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  width: 100%;\n}\n.nav .top[data-v-781083d4] {\n  height: 60px;\n  background-color: indianred;\n}\n.nav .menu[data-v-781083d4] {\n  position: fixed;\n  top: 60px;\n  left: 0;\n  z-index: 2;\n  right: 0;\n  bottom: 0;\n  background-color: #333;\n  height: 100%;\n}\n.nav .menu .element-border[data-v-781083d4] {\n  width: 210px;\n  height: 230px;\n  background-color: rgba(255, 255, 255, 0.28);\n  padding: 0 10px;\n  border-radius: 150px;\n  margin: 15px;\n}\n.nav .menu .element-border .element[data-v-781083d4] {\n  background-color: #fff;\n  border-radius: 150px;\n  min-width: 210px;\n  min-height: 210px;\n}\n.nav .menu .element-border .element img[data-v-781083d4] {\n  height: 85px;\n}\n.nav .menu .element-border .element span[data-v-781083d4] {\n  font-size: 23px;\n  margin-bottom: 15px;\n}\n", ""]);
 
 /***/ }),
 /* 12 */
@@ -1274,7 +1285,24 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _vm._m(0)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('p', [_vm._v("Меню")])])
+  return _c('div', {
+    staticClass: "nav"
+  }, [_c('div', {
+    staticClass: "top"
+  }, [_c('span', [_vm._v("Меню")]), _vm._v(" "), _c('div', {
+    staticClass: "burger"
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "menu"
+  }, [_c('div', {
+    staticClass: "element-border flex fcenter"
+  }, [_c('div', {
+    staticClass: "element flex fcenter fcol"
+  }, [_c('span', [_vm._v("Список покупок")]), _vm._v(" "), _c('img', {
+    attrs: {
+      "src": "img/icon-256.png",
+      "alt": ""
+    }
+  })])])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {

@@ -8,7 +8,7 @@ Vue.component("btn", require("./components/btn.vue"));
 new Vue({
   el: "#cookienator",
   data: {
-    page: "auth"
+    page: "statistics"
   },
   methods: {
     go(page) {
